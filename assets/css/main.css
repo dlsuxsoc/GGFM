@@ -1,0 +1,198 @@
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+        @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap:100');
+        * {
+            margin: 0px;
+        }
+        
+        .roboto{
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13.5px;
+            letter-spacing: .1rem;
+            line-height: 16.41px;
+            font-weight: bold;
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 10%, rgba(80, 20, 20, 0.5)  92.36%, rgba(255, 255, 255, 0.75)143.01%), url("/assets/GGFM%20Photos/WEB_%20Background/GG_BG_C-10.jpg");
+        }
+        
+        #song-artist{
+            color: rgba(255, 255, 255, 0.75);
+            font-family: 'Comfortaa';
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            line-height: 11px;
+        }
+        
+        #song-name{
+            color: white;
+            font-family: 'Comfortaa', cursive;
+            font-size: 16px;
+            padding: 0px 10px;
+        }
+        .overlay{
+            background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.35) 70%, rgba(0,0,0,0.9)); 
+            position: absolute;
+            clear: float;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+             border-radius: .5em;
+        }
+        .container{
+            display: grid;
+            
+            grid-template-columns: [col-0] 10% [col-1] 10px [col-2] auto [col-3] 10px [col-4] 10% [col-5];
+            
+            grid-template-rows: [row-0] 15% [row-1] auto [row-3] 5% [row-4];
+        }
+        
+        .nav-wrapper{
+/*            background-color: tr;*/
+            grid-column-start: col-0;
+            grid-column-end: span col-5;
+            grid-row-start: row-0;
+            grid-row-end: span row-1; 
+            
+            display: grid;
+            
+            grid-template-columns: [coln-0] 10% [coln-1] 10px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 3% [coln-7]
+            
+        }
+        .nav-list{
+            display: inline-flex;
+            padding: 0px;
+            grid-column-start: coln-5;
+            grid-column-end: span coln-6; 
+            list-style: none;
+            overflow-x: hidden;
+            
+        }
+        .nav-item{
+            padding: 45px 35px;
+            background-color: transparent;
+            
+        }
+        .nav-logo{
+/*            background-color: beige;*/
+            margin-top: 20px;
+            grid-column-start: coln-2;
+            grid-column-end: span coln-3; 
+           
+        }
+        
+        .main-wrapper{
+            grid-column-start: col-2;
+            grid-column-end: span col-3;
+            grid-row-start: row-1;
+            grid-row-end: span row-3; 
+            
+            display: flex;
+            margin-top: 25px;
+            width: 100%;
+            height: 100%;
+/*            background-color: black;*/
+            justify-content: center;
+        }
+    
+        
+        .sticky-player{
+            position: fixed;
+            bottom: 0px;
+            height: 1.5em;
+            width: 100%;
+            background: #282828;
+            display: grid;
+            grid-template-columns: [coln-0] 24px[coln-1] 10px [coln-2] 200px [coln-3] auto [coln-4] 10px [coln-5] auto [coln-6] 15% [coln-7]
+            
+        }
+        .carousel{
+            height: 430px;
+            width: 760px;
+            box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.75);
+            border-radius: 0.5em;
+/*            background-color: aqua;*/
+        }
+        
+        @media only screen and (max-width: 800px) {
+          .carousel{
+                width: 400px;
+            }
+            img{
+                object-fit: contain;
+            }
+        }
+        
+        #play-btn{
+/*            background-color: violet;*/
+             grid-column-start: coln-0;
+            grid-column-end: span coln-2; 
+         }
+        
+        #music-details{
+/*           background-color: blue;*/
+            grid-column-start: coln-2;
+            grid-column-end: span coln-3; 
+            display: inline-flex;
+            align-items: center;
+         }
+        
+        #audio-progress{
+/*            background-color: red;*/
+            grid-column-start: coln-3;
+            grid-column-end: span coln-6; 
+            display: inline-flex;
+            padding: 6px 5%;
+        }
+        
+        .audio-volume{
+            grid-column-start: coln-6;
+            grid-column-end: span coln-7; 
+           
+        }
+        
+        .audioplayer-time{
+            color: #DDDDDD;
+            font-family: 'Comofortaa';
+            font-style: normal;
+            font-size: 0.5em;
+            align-items: center;
+            letter-spacing: .15em;
+            line-height: 9px;
+        }
+        
+        .slick-dots {
+	       display: flex;
+	       justify-content: center;
+	       margin-bottom: -20px;
+            
+        }
+        
+  .slick-dots li button::before {
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  .slick-dots li.slick-active button::before {
+    color: #fff;
+    opacity: 1;
+  }  
+        
+        img{
+            height: 100%; width: 100%;
+            border-radius: .6em;
+            object-fit: cover;
+        }
+        
+        .sticky-player img{
+            height: 100%; width: 100%;
+            border-radius: 5px;
+            box-shadow: 10px;
+            object-fit: contain;
+        }
+        
