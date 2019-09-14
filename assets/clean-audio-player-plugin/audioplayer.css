@@ -1,33 +1,27 @@
 /* RemixDesign | woaichidapi@163.com | Redesigned by JimmyCheung */
 
 .audioplayer {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    margin: 1em 0;
-    padding: 0 24px;
-    width: 100%;
-    height: 96px;
-    align-items: center;
-    border: 1px solid #DDE2E6;
-    border-radius: 4px;
-    background: #fff;
+                position: fixed;
+            bottom: 0px;
+            height: 1.5em;
+            width: 100%;
+            background: #282828;
+            display: grid;
+            grid-template-columns: [coln-0] 24px[coln-1] 10px [coln-2] 200px [coln-3] auto [coln-4] 10px [coln-5] auto [coln-6] 15% [coln-7]
+            
 }
 
 .audioplayer-playpause {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    grid-column-start: coln-0;
+    grid-column-end: span coln-2; 
 }
 
 .audioplayer:not(.audioplayer-playing) .audioplayer-playpause {
     background: rgba(91, 130, 255, 0);
-    border: 1px solid #5B82FF;
 }
 
 .audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover {
@@ -36,7 +30,7 @@
 
 .audioplayer-playing .audioplayer-playpause {
     background: rgba(253, 79, 26, 0);
-    border: 1px solid #FD4F1A;
+/*    border: 1px solid #FD4F1A;*/
 }
 
 .audioplayer-playing .audioplayer-playpause:hover {
@@ -169,7 +163,7 @@
     display: flex;
     width: 6px;
     height: 8px;
-    background-color: #9A9FB0;
+    background-color: #FFFF;
     position: relative;
 }
 
@@ -182,7 +176,7 @@
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
-    border-right: 9px solid #9A9FB0;
+    border-right: 9px solid #FFFF;
     border-bottom: 8px solid transparent;
     border-left: none;
     top: -4px;
@@ -217,17 +211,19 @@
     position: relative;
     display: flex;
     width: 60px;
-    height: 2px;
+    height: 2.5px;
     cursor: pointer;
-    background-color: #BEC8D2;
+    border-radius: 2px;
+    background-color: #C4C4C4;
 }
 
 .audioplayer-volume-adjust div div {
     position: absolute;
     top: 0;
     left: 0;
-    height: 2px;
-    background-color: #0059FF;
+    height: 2.5px;
+    border-radius: 2px;
+    background-color: #C4C4C4;
 }
 
 /* responsive | you can change the max-width value to match your theme */
