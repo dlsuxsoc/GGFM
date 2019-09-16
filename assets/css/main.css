@@ -7,7 +7,7 @@
         .roboto{
             color: white;
             font-family: 'Roboto', sans-serif;
-            font-size: 13.5px;
+            font-size: 12px;
             letter-spacing: .1rem;
             line-height: 16.41px;
             font-weight: bold;
@@ -46,7 +46,7 @@
         .container{
             display: grid;
             
-            grid-template-columns: [col-0] 10% [col-1] 10px [col-2] auto [col-3] 10px [col-4] 10% [col-5];
+            grid-template-columns: [col-0] 50px [col-1] 10% [col-2] auto [col-3] 10% [col-4] 50px [col-5];
             
             grid-template-rows: [row-0] 15% [row-1] auto [row-3] 5% [row-4];
         }
@@ -60,7 +60,7 @@
             
             display: grid;
             
-            grid-template-columns: [coln-0] 10% [coln-1] 10px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 3% [coln-7]
+            grid-template-columns: [coln-0] 10% [coln-1] 0px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 3% [coln-7]
             
         }
         .nav-list{
@@ -70,10 +70,11 @@
             grid-column-end: span coln-6; 
             list-style: none;
             overflow-x: hidden;
+            overflow-y: hidden;
             
         }
         .nav-item{
-            padding: 45px 35px;
+            padding: 48px 30px;
             background-color: transparent;
             
         }
@@ -98,7 +99,7 @@
 /*            background-color: black;*/
             justify-content: center;
         }
-    
+        
         
         .sticky-player{
             position: fixed;
@@ -116,6 +117,15 @@
             box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.75);
             border-radius: 0.5em;
 /*            background-color: aqua;*/
+        }
+        .nav-item img{
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        .carousel-pic{
+             border-radius: 0.75em;
         }
         
         @media only screen and (max-width: 800px) {
@@ -195,14 +205,15 @@
             box-shadow: 10px;
             object-fit: contain;
         }
-
+/*---- Event Page ----*/
 .events-wrapper{
-    background-color: aqua;
+    margin: 20px;
+    background: rgba(0,0,0,0.75); 
     
-    grid-column-start: col-2;
-    grid-column-end: span col-3;
-grid-row-start: row-1;
-            grid-row-end: span row-3; 
+    grid-column-start: col-1;
+    grid-column-end: span col-4;
+    grid-row-start: row-1;
+    grid-row-end: span row-3; 
     
 }
         

@@ -9,9 +9,15 @@ $(document).ready(function(){
 	fadeSpeed: 1000
 
   });//carousel
-
+ 
  $(function() {
      $('audio').audioPlayer();
  });
-
+    
+$('.demo').slick({
+  infinite: false,
+  slidesToScroll: 3,
+  slidesPerRow: 3,
+});
+		
 })
