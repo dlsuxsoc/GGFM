@@ -1,5 +1,5 @@
   @import url('https://fonts.googleapis.com/css?family=Roboto:100');
-        @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap:100');
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap:100');
         * {
             margin: 0px;
         }
@@ -7,7 +7,7 @@
         .roboto{
             color: white;
             font-family: 'Roboto', sans-serif;
-            font-size: 12px;
+            font-size: 13.5px;
             letter-spacing: .1rem;
             line-height: 16.41px;
             font-weight: bold;
@@ -15,7 +15,7 @@
         .bg {
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 10%, rgba(80, 20, 20, 0.5)  92.36%, rgba(255, 255, 255, 0.75)143.01%), url("/assets/GGFM%20Photos/WEB_%20Background/GG_BG_C-10.jpg");
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 10%, rgba(80, 20, 20, 0.5)  92.36%, rgba(255, 255, 255, 0.75)143.01%), url("../GGFM%20Photos/WEB_%20Background/GG_BG_C-10.jpg");
         }
         
         #song-artist{
@@ -70,17 +70,12 @@
             grid-column-end: span coln-6; 
             list-style: none;
             overflow-x: hidden;
-            overflow-y: hidden;
             
         }
         .nav-item{
-            padding: 45px 25px;
+            padding: 45px 35px;
             background-color: transparent;
             
-        }
-        .nav-item img{
-            width: 24px;
-            height: 24px;
         }
         .nav-logo{
 /*            background-color: beige;*/
@@ -103,6 +98,18 @@
 /*            background-color: black;*/
             justify-content: center;
         }
+    
+        
+        .sticky-player{
+            position: fixed;
+            bottom: 0px;
+            height: 1.5em;
+            width: 100%;
+            background: #282828;
+            display: grid;
+            grid-template-columns: [coln-0] 24px[coln-1] 10px [coln-2] 200px [coln-3] auto [coln-4] 10px [coln-5] auto [coln-6] 15% [coln-7]
+            
+        }
         .carousel{
             height: 430px;
             width: 760px;
@@ -122,7 +129,8 @@
         
         #play-btn{
 /*            background-color: violet;*/
-           
+             grid-column-start: coln-0;
+            grid-column-end: span coln-2; 
          }
         
         #music-details{
@@ -164,11 +172,11 @@
             
         }
         
-    .slick-dots li button::before {
-        font-size: 13px;
-        color: #fff;
-        opacity: 0.5;
-    }
+  .slick-dots li button::before {
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.5;
+  }
 
   .slick-dots li.slick-active button::before {
     color: #fff;
@@ -177,7 +185,7 @@
         
         img{
             height: 100%; width: 100%;
-            border-radius: .6em;
+            /* border-radius: .6em; */
             object-fit: cover;
         }
         
@@ -197,4 +205,194 @@ grid-row-start: row-1;
             grid-row-end: span row-3; 
     
 }
+        
+
+        /*---- Radio Talent Page ----*/
+
+        div .rt-profile{
+            height: 50%;
+            width: 65%;
+            background: rgba(34, 34, 34, 0.25);
+            margin: 0 auto;
+            /* mix-blend-mode: overlay; */
+            display: flex;
+        }
+
+        
+
+        .rt-pic{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:15px;
+            /* background:red; */
+        }
+
+        .rt-pic > img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:90%;
+            height: 95%;
+            
+        }
+
+        .rt-description{
+            width: 70%;
+            height: 100%;
+            padding: 10px;
+            padding-top:40px;
+            /* background: blue; */
+        }
+
+        .rt-name{
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-decoration-line: underline;
+
+            color: #FFFFFF;
+        }
+
+        .rt-text1{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.07em;
+            padding-top: 10px;
+            color: #AAAAAA;
+        }
+
+        .rt-text2{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            
+            color: #FFFFFF;
+
+            padding-top: 20px;
+        }
+
+        .rt-text2 > span{
+            font-weight: bold;
+            padding-right: 5px;
+        }
+
+        .rt-text3{
+            
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        .rt-text3 > span, .rt-text3 > p > span{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            color: #CFCFCF;
+        }
+
+        .rt-text3 > p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #CFCFCF;
+        }
+
+        .rt-links{
+            align-self: flex-end;
+        }
+        .sm-icon{
+            height: 45px;
+            width: 45px;
+            opacity: 0.8;
+        }
+
+        .sm-icon:hover {
+            opacity: 1;
+        }
+
+        .carousel-wrapper{
+            width: 100%;
+            height: 27.5%;
+            margin-top:20px;
+            margin-bottom:20px;
+            
+            /* background: red; */
+        }
+
+        .slider-image{
+            max-width:95%;
+            max-height:auto;
+
+
+            object-fit: cover;
+            object-position: 50% 0;
+        }
+
+
+        /*---- Radio Talent Page 2 ----*/
+
+        .rt-container{
+            overflow: auto;
+        }
+
+        .rt-grid{
+            display: grid;
+            grid-column-gap: 5px;
+            padding-left:5%;
+            padding-right: 5%;
+            grid-template-columns: auto auto auto auto;
+            /* overflow:auto; */
+        }
+
+
+        .rt-div{
+            margin-bottom: 2em;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 5%;
+            
+        }
+
+        .rta-img{
+            width: auto;
+            height: 260px;
+        }
+
+        .rta-img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 186, 25, 0.5);
+          }
+
+        .rta-name{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+
+        
+
         
