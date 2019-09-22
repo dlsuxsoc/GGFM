@@ -11,13 +11,14 @@ $(document).ready(function(){
   });//carousel
  
  $(function() {
-     $('audio').audioPlayer();
+     $('audio').audioPlayer()
  });
     
 $('.demo').slick({
   infinite: false,
   slidesToScroll: 3,
   slidesPerRow: 3,
+    arrows: true,
 });
 		
 })

@@ -209,14 +209,16 @@
 .events-wrapper{
     margin: 20px;
     background: rgba(0,0,0,0.75); 
-    
     grid-column-start: col-1;
     grid-column-end: span col-4;
     grid-row-start: row-1;
     grid-row-end: span row-3; 
-    
 }
-        
+
+.demo{
+    width: 500px;
+}
+
 
         /*---- Radio Talent Page ----*/
 
