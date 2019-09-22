@@ -15,10 +15,10 @@ $(document).ready(function(){
  });
     
 $('.demo').slick({
-  infinite: false,
-  slidesToScroll: 3,
+  infinite: true,
+  slidesToScroll: 1,
   slidesPerRow: 3,
-    arrows: true,
+    arrows: true
 });
 		
 })
