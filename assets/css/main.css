@@ -3,6 +3,8 @@
         * {
             margin: 0px;
         }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
         
         .roboto{
             color: white;
@@ -128,15 +130,6 @@
              border-radius: 0.75em;
         }
         
-        @media only screen and (max-width: 800px) {
-          .carousel{
-                width: 400px;
-            }
-            img{
-                object-fit: contain;
-            }
-        }
-        
         #play-btn{
 /*            background-color: violet;*/
              grid-column-start: coln-0;
@@ -213,11 +206,71 @@
     grid-column-end: span col-4;
     grid-row-start: row-1;
     grid-row-end: span row-3; 
+    
+    display: inline-block;
+    
 }
 
 .demo{
-    width: 500px;
+    max-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
+
+.event-wrapper{
+    height: 99%;
+    padding: 15px;
+    position: relative;
+}
+.event-wrapper img{
+    object-fit: cover;
+    background-blend-mode: color;
+}
+
+.event-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+/*    background-color: red;*/
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+}
+
+.event-overlay div{
+    position: relative;
+    padding: 5px;
+    padding-top: 80%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
+    
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.event-overlay h2{
+    position: relative;;
+    font-size: 15px;
+}
+
+.event-overlay p{
+    
+    position: relative;
+    font-size: 12px;
+}
+
+        @media only screen and (max-width: 800px) {
+          .carousel{
+                width: 400px;
+            }
+            .events-wrapper{
+                width: 400px;
+            }
+        }
+        
 
 
         /*---- Radio Talent Page ----*/
