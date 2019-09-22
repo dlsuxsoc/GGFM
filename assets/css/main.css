@@ -50,7 +50,7 @@
             
             grid-template-columns: [col-0] 50px [col-1] 10% [col-2] auto [col-3] 10% [col-4] 50px [col-5];
             
-            grid-template-rows: [row-0] 15% [row-1] auto [row-3] 5% [row-4];
+            grid-template-rows: [row-0] 15% [row-1] 80% [row-3] 5% [row-4];
         }
         
         .nav-wrapper{
@@ -200,26 +200,23 @@
         }
 /*---- Event Page ----*/
 .events-wrapper{
-    margin: 20px;
-    background: rgba(0,0,0,0.75); 
     grid-column-start: col-1;
     grid-column-end: span col-4;
     grid-row-start: row-1;
     grid-row-end: span row-3; 
     
-    display: inline-block;
-    
+    padding: 20px;
+    display: flow-root;
 }
 
 .demo{
+    background: rgba(0,0,0,0.75); 
     max-width: 1140px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    max-height: 95%;
 }
 
 .event-wrapper{
-    height: 99%;
+    height: 95%;
     padding: 15px;
     position: relative;
 }
@@ -238,6 +235,7 @@
     width: 100%;
     height: 100%;
     padding: inherit;
+    
 }
 
 .event-overlay div{
@@ -249,6 +247,13 @@
     width: 100%;
     height: 100%;
     color: white;
+}
+
+.events-filter{
+    background-color: rgb(0,0,0,0.75);
+    width: 80px;
+    height: 35px;
+    align-items: flex-end;
 }
 
 .event-overlay h2{
