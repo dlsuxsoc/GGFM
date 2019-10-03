@@ -24,8 +24,8 @@ $(document).ready(function(){
             div.append(name)
             $(".rt-grid").append(div);
         }
-    
-    
+        
+        $(".rt-grid").append("<div style = 'height: 50px; width: 100%'></div>");
     })
         
       
