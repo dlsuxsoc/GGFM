@@ -6,9 +6,7 @@ $(document).ready(function(){
 	autoplay: true,
 	autoplaySpeed: 3000,
 	fade: true,
-	fadeSpeed: 1000
-    
-    
+	fadeSpeed: 1000,
   });//carousel
  
  $(function() {
@@ -25,6 +23,17 @@ $('.demo').slick({
     arrows: true
 });
     
+  $('.blog-carousel').slick({
+       infinite: true,
+	dots: true,
+	arrows: false,
+	autoplay: true,
+	autoplaySpeed: 3000,
+	fade: true,
+	fadeSpeed: 1000,
+  });//carousel
+ 
+    
 $("body").click((e)=>{
    if($(e.target).hasClass("btndropdown")){
         if($(".dropdown").is(":hidden")){
@@ -39,5 +48,6 @@ $("body").click((e)=>{
         }      
     }
 })
-		
+    
 })
+

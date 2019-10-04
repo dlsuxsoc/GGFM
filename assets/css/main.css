@@ -9,15 +9,16 @@
         .roboto{
             color: white;
             font-family: 'Roboto', sans-serif;
-            font-size: 12px;
+            font-size: 14px;
             letter-spacing: .1rem;
             line-height: 16.41px;
             font-weight: bold;
         }
         .bg {
+            background-size: cover;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 10%, rgba(80, 20, 20, 0.5)  92.36%, rgba(255, 255, 255, 0.75)143.01%), url("../GGFM%20Photos/WEB_%20Background/GG_BG_C-10.jpg");
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 10%, rgba(80, 20, 20, 0.5)  92.36%, rgba(255, 255, 255, 0.75)143.01%), url("../GGFM%20Photos/WEB_%20Background/GG_BG_C-10.jpg");
         }
         
         #song-artist{
@@ -50,7 +51,7 @@
             
             grid-template-columns: [col-0] 50px [col-1] 10% [col-2] auto [col-3] 10% [col-4] 50px [col-5];
             
-            grid-template-rows: [row-0] 15% [row-1] 80% [row-3] 5% [row-4];
+            grid-template-rows: [row-0] 15% [row-1] 85% [row-3] 3% [row-4];
         }
         
         .nav-wrapper{
@@ -75,7 +76,7 @@
             overflow-x:hidden; 
         }
         .nav-item{
-            padding: 48px 30px;
+            padding: 48px 22px;
             background-color: transparent;
             overflow-x: inherit;
             overflow-y:inherit; 
@@ -92,7 +93,7 @@
             grid-column-start: col-2;
             grid-column-end: span col-3;
             grid-row-start: row-1;
-            grid-row-end: span row-3; 
+            grid-row-end: span row-2y; 
             
             display: flex;
             flex-wrap:wrap;
@@ -180,7 +181,7 @@
     color: #fff;
     opacity: 0.5;
   }
-
+    
   .slick-dots li.slick-active button::before {
     color: #fff;
     opacity: 1;
@@ -237,7 +238,9 @@
     padding: inherit;
     
 }
-
+.demo{
+    margin-top: 35px;
+}
 .event-overlay div{
     position: relative;
     padding: 5px;
@@ -251,9 +254,7 @@
 
 .events-filter{
     position: relative;
-    margin-left: %;
-    
-    background-color: rgb(0,0,0,0.75);
+    background-color: rgb(0,0,0,0.5);
     width: 120px;
     height: 35px;
     color: white;
@@ -262,6 +263,8 @@ font-size: 14px;
 line-height: 18px;
     text-align: left;
     padding: 10px 15px;
+    margin-right: 20px;
+    float: right;
 }
 .dropdown{
     color: white;
@@ -269,8 +272,9 @@ line-height: 18px;
     width: 120px;
     text-align: left;
     padding: 5px;
+    margin-top: 40px;
+    margin-left: 50%;
     padding-left: 15px;
-    float: left;
     position: absolute;
     z-index: 1;
 }
@@ -312,8 +316,49 @@ line-height: 18px;
                 width: 520px;
             }
         }
+/*===========Blog page*/
+.blogs-wrapper{
+    grid-column-start: col-1;
+    grid-column-end: span col-4;
+    grid-row-start: row-1;
+    grid-row-end: span row-3; 
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+}
 
+.blog-main-wrapper{
+    width: 55%;
+    background-color:antiquewhite;
+    padding: 10px;
+       padding-bottom: 40px;
+}
 
+.blog-main-wrapper > .blog-carousel{
+    width:400px;
+}
+
+.blog-wrapper{
+    background-color: rebeccapurple;
+    width: 45%;
+    display: flex;
+    position:relative;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+    
+}
+
+.blog > .blog-carousel{
+    width: 200px;
+    height: 150px;;
+}
+.blog{
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: aqua;
+}
         /*---- Radio Talent Page ----*/
 
         div .rt-profile{
