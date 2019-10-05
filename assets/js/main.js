@@ -45,20 +45,20 @@ $(".blog-overlay").on('wheel', (function(e) {
 }));
 
     
-//$("body").click((e)=>{
-//   if($(e.target).hasClass("btndropdown")){
-//        if($(".dropdown").is(":hidden")){
-//            $(".dropdown").slideDown("slow");
-//        }else{
-//              $(".dropdown").slideUp("slow");
-//        }
-//    }
-//    else{
-//        if($(".dropdown").is(":visible")){
-//            $(".dropdown").slideUp("slow");
-//        }      
-//    }
-//})
+$("body").click((e)=>{
+   if($(e.target).hasClass("btndropdown")){
+        if($(".dropdown").is(":hidden")){
+            $(".dropdown").slideDown("slow");
+        }else{
+              $(".dropdown").slideUp("slow");
+        }
+    }
+    else{
+        if($(".dropdown").is(":visible")){
+            $(".dropdown").slideUp("slow");
+        }      
+    }
+})
     
 })
 
