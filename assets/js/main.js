@@ -25,7 +25,7 @@ $('.demo').slick({
     
   $('.blog-carousel').slick({
        infinite: true,
-	dots: true,
+	dots: false,
 	arrows: false,
 	autoplay: true,
 	autoplaySpeed: 3000,
