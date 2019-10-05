@@ -3,11 +3,12 @@
 .audioplayer {
                 position: fixed;
             bottom: 0px;
-            height: 1.5em;
+            height: 2em;
             width: 100%;
             background: #282828;
             display: grid;
-            grid-template-columns: [coln-0] 24px[coln-1] 10px [coln-2] 200px [coln-3] auto [coln-4] 10px [coln-5] auto [coln-6] 15% [coln-7]
+            grid-template-columns: [coln-0] 24px[coln-1] 10px [coln-2] 200px [coln-3] auto [coln-4] 10px [coln-5] auto [coln-6] 15% [coln-7];
+            align-items: center;
             
 }
 

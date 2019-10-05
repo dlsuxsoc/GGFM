@@ -9,9 +9,9 @@
         .roboto{
             color: white;
             font-family: 'Roboto', sans-serif;
-            font-size: 14px;
+            font-size: 100%;
             letter-spacing: .1rem;
-            line-height: 16.41px;
+            line-height: 24.41px;
             font-weight: bold;
         }
         .bg {
@@ -62,20 +62,24 @@
             grid-column-end: span col-5;
             grid-row-start: row-0;
             grid-row-end: span row-1; 
-            
+            position: relative;
             display: grid;
             
-            grid-template-columns: [coln-0] 10% [coln-1] 0px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 3% [coln-7]
+            grid-template-columns: [coln-0] 10% [coln-1] 0px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 10% [coln-7]
             
         }
         .nav-list{
             display: inline-flex;
-            padding: 0px;
             grid-column-start: coln-5;
             grid-column-end: span coln-6; 
             list-style: none;
             overflow-y: hidden;
             overflow-x:hidden; 
+             position: relative;
+            margin-top: 20px;
+            
+            display: flex;
+            justify-content: flex-end;
         }
         .nav-item{
             padding: 48px 22px;
@@ -86,6 +90,7 @@
         .nav-logo{
 /*            background-color: beige;*/
             margin-top: 20px;
+            width: 320px;
             grid-column-start: coln-2;
             grid-column-end: span coln-3; 
            
@@ -103,29 +108,24 @@
             width: 100%;
             height: 100%;
             justify-content: center;
+            position: relative;
         }
         
         
-        .sticky-player{
-            position: fixed;
-            bottom: 0px;
-            height: 1.5em;
-            width: 100%;
-            background: #282828;
-            display: grid;
-            grid-template-columns: [coln-0] 24px[coln-1] 10px [coln-2] 200px [coln-3] auto [coln-4] 10px [coln-5] auto [coln-6] 15% [coln-7]
-            
-        }
         .carousel{
-            height: 430px;
-            width: 760px;
+            top: 0;
+            bottom:125;
+            left: 10;
+            right: 10;
             box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.75);
             border-radius: 0.5em;
 /*            background-color: aqua;*/
+            position: absolute;
+            
         }
         .nav-item img{
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
         }
         
 
@@ -202,25 +202,33 @@
             object-fit: contain;
         }
 /*---- Event Page ----*/
+
 .events-wrapper{
+    position: relative;
     grid-column-start: col-1;
     grid-column-end: span col-4;
     grid-row-start: row-1;
     grid-row-end: span row-3; 
-    
-    padding: 1px 10px 15px 10px;
-    
+    width: 100%;
+/*    background-color: aliceblue;*/
+    display: flex;
+    margin-top: 10px;
 }
 
-.demo{
+.events-carousel{
+    position: absolute;
     background: rgba(0,0,0,0.5); 
-    max-width: 1140px;
-    max-height: 90%;
+    top: 0;
+    bottom: 50;
+    right: 40;
+    left: 40;
+    display: flex;
+    margin-top: 35px;
 }
 
 .event-wrapper{
-    height: 90%;
-    padding: 10px;
+    height: 100%;
+    padding: 20px;
     position: relative;
     
 }
@@ -240,16 +248,14 @@
     width: 100%;
     height: 100%;
     padding: inherit;
+    z-index: 2;
     
-}
-.demo{
-    margin-top: 35px;
 }
 .event-overlay div{
     position: relative;
     padding: 5px;
     padding-top: 80%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.75));
     
     width: 100%;
     height: 100%;
@@ -260,11 +266,11 @@
     position: absolute;
     right: 70;
     background-color: rgb(0,0,0,0.5);
-    width: 120px;
+    width: auto;
     height: 35px;
     color: white;
     font-family: Comfortaa;
-font-size: 14px;
+font-size: 18px;
 line-height: 18px;
     text-align: left;
     padding: 10px 15px;
@@ -274,10 +280,10 @@ line-height: 18px;
 .dropdown{
     color: white;
     background-color: rgb(2,2,2,1);
-    width: 120px;
+    width: 145px;
     text-align: left;
     padding: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 50%;
     padding-left: 15px;
     position: absolute;
@@ -286,42 +292,38 @@ line-height: 18px;
 }
 
 .dropdown .item{
-    height: 35px;
+    height: auto;
     padding: 10px 0px;
      font-family: Comfortaa;
-font-size: 14px;
-line-height: 18px;
+font-size: 16px;
+line-height: 24px;
 }
 .events-filter img{
-    position: absolute;
+    position: relative;;
     bottom: 0;
     margin-left: 20px;
     width: 32px;
 }
 .event-overlay{
+    position: re;
+    top: 0;
+    bottom: 0;
     color: white;
     font-family: Comfortaa;
-    font-size: 14px;
-    line-height: 18px;
+    line-height: 38px;
 }
 .event-overlay h2{
-    position: relative;;
-    font-size: 15px;
+    position: relative;
+    font-size: 24px;
+    padding-left: 10px;
 }
 
 .event-overlay p{
     position: relative;
-    font-size: 12px;
+    font-size: 18px;
+    padding-left: 10px;
 }
 
-        @media screen and (max-width: 800px) {
-          .carousel{
-                width: 400px;
-            }
-            .events-wrapper{
-                width: 520px;
-            }
-        }
 /*===========Blog page*/
 .blogs-wrapper{
     position: relative;

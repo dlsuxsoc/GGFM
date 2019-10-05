@@ -16,11 +16,10 @@ $(document).ready(function(){
     
 $(".dropdown").hide();
 
-$('.demo').slick({
+$('.events-carousel').slick({
   infinite: true,
   slidesToScroll: 1,
-  slidesPerRow: 3,
-    arrows: true
+  slidesPerRow: 3
 });
 
 var slider = $(".blog-carousel");
@@ -44,6 +43,17 @@ $(".blog-overlay").on('wheel', (function(e) {
   }
 }));
 
+var eventslider = $(".events-carousel");
+    
+$(".events-wrapper").on('wheel', (function(e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaX > 0) {
+    eventslider.slick('slickNext');
+  } else {
+    eventslider.slick('slickPrev');
+  }
+}));
     
 $("body").click((e)=>{
    if($(e.target).hasClass("btndropdown")){
