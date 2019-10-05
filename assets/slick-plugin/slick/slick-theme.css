@@ -150,6 +150,7 @@
     padding: 0;
 
     cursor: pointer;
+    
 }
 .slick-dots li button
 {
@@ -191,7 +192,7 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '\2022';
     text-align: center;
 
     font-size: 13px;
