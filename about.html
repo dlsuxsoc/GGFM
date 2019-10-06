@@ -1,0 +1,523 @@
+<html>
+<head>
+
+    <!-- Jquery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    
+    <!-- Slick -->
+        
+    <script src="assets/slick-plugin/slick/slick.js"></script>
+    <link rel="stylesheet" href="assets/slick-plugin/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick-plugin/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <script rel="text/javascript" src="assets/js/main.js"></script> -->
+    <script rel="text/javascript" src="assets/js/about.js"></script>
+
+    <!-- Audioplayer -->
+    <link rel="stylesheet" href="assets/clean-audio-player-plugin/audioplayer.css">
+    <script src="assets/clean-audio-player-plugin/audioplayer.js"></script>
+
+    <style>
+
+        body{
+            background: #404040;
+        }
+        .part{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+        .about-f1{
+            grid-column-start: col-1;
+            grid-column-end: span col-4;
+            
+            display: flex;
+            flex-direction: row;
+            margin-top: 25px;
+            
+        }
+
+        .carousel-mini{
+            width: 60%;
+        }
+
+        .about-f1 > :nth-child(2){
+            width: 40%;
+            padding-top: 10%;
+            padding-right: 5%;
+
+        }
+
+        .carousel-mini2{
+            width: 50%;
+            height: 55%;
+            top: 25%;
+            bottom:125;
+            left: 5%;
+            right: 10;
+            box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.75);
+            border-radius: 0.5em;
+            position: absolute;
+            
+        }
+
+        .about-main{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 28px;
+            /* identical to box height */
+
+            letter-spacing: 0.07em;
+
+            color: #FFA800;
+
+            text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-desc{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.07em;
+
+            color: rgba(212, 210, 206, 0.8);
+
+        }
+
+        .about-vm{
+            display: flex;
+            flex-direction: row;
+            background-image: linear-gradient(180deg, rgb(50, 50, 50)5%, rgb(5, 5, 5) );
+            padding:10%;
+        }
+
+        .vision{
+            display: grid;
+        }
+
+        .vision > .content{
+            padding: 15px;
+            grid-row-start: 5
+        }
+
+        .mission{
+            padding:15px;
+        }
+
+        .about-eb{
+            padding: 2%;
+            background-color: #353535;
+        }
+
+        .f-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+
+        .f-title{
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 38px;
+            line-height: 42px;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding-bottom: 10px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+
+        .f-description{
+            padding-top: 2%;
+            width: 50%;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.07em;
+
+            color: #AAAAAA;
+        }
+
+        .eb-cards{
+            display: flex;
+            flex-direction: row;
+            margin-top: 2%;
+            height: 78%;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .eb-cards > .card{
+            padding: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 20%;
+            height: 100%;
+            background-color: rgb(50, 50, 50);
+            display: grid;
+            grid-template-rows: 40% 10% 42% 8%
+        }
+
+        .card > .card-pic{
+            width: 200px;
+            height: 200px;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 122px;
+            justify-self: center;
+        }
+
+        .c-name{
+            justify-self:center;
+            text-align: center;
+        }
+    
+        .c-name > h1{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 30px;
+
+            color: #FFFFFF;
+        }
+
+        .c-name > h2{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #DDDDDD;
+        }
+
+        .c-desc{
+            margin-top: 20px;
+            padding-left: 10%;
+            padding-right: 10%;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.07em;
+            color: #AAAAAA;
+        }
+
+        .c-desc > p{
+            align-self: left;
+        }
+
+        .c-links{
+            justify-self:center;
+        }
+
+        .sm2-icon{
+            height: 40px;
+            width: 40px;
+            opacity: 0.8;
+        }
+
+        .sm2-icon:hover {
+            opacity: 1;
+        }
+
+        .about-pools{
+            padding: 2%;
+            background: #404040;
+        }
+
+        .pool-wrapper{
+            margin-top: 2%;
+            padding-left: 6%;
+            padding-right: 6%;
+            width: 100%;
+            height: 80%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+        }
+
+        .pool-container{
+            display: grid;
+            grid-template-rows: 40% 15% 35%
+        }
+
+        .pool-img{
+            width: 100px;
+            height: 100px;
+            justify-self:center;
+        }
+
+        .pool-title{
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            color: #FFFFFF;
+            justify-self:center;
+        }
+
+        .pool-desc{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 14px;
+            color: #DDDDDD;
+            padding-right: 10%;
+            padding-left: 10%;
+        }
+        
+    </style>
+</head>
+
+<body>
+<div class = "container bg">
+    <div class = "nav-wrapper">
+        <div class = 'nav-logo'>
+        <img src="assets/GGFM%20Photos/Logos/PNGs/GGFM%20Logo_Dark.png"  style='height: 100%; width: 100%; object-fit: contain'/>
+        </div>
+        <ul class = "nav-list">
+            <li class = "nav-item roboto">HOME</li>
+            <li class = "nav-item roboto">ABOUT</li>
+            <li class = "nav-item roboto">RADIO TALENTS</li>
+            <li class = "nav-item roboto">EVENTS</li>
+            <li class = "nav-item roboto">BLOGS</li>
+            <li class = "nav-item"><img src = "assets/icons/2x/outline_cast_white_24dp.png"></li>
+            <li class = "nav-item"><img src = "assets/icons/2x/baseline_search_white_24dp.png"></li>
+        </ul>
+    </div>
+    <!-- First page -->
+    <div class="about-f1 part">
+        <!-- Mini Carousel -->
+        <div class="carousel-mini">
+                <div class = "slider single-item carousel-mini2">
+                        <div class = "slide">
+                            <img class = "carousel-pic" src="assets/GGFM%20Photos/WEB_%20Background/GG_BG_C-9.jpg"/>
+                            <div class = "overlay"></div>
+                        </div>
+                        <div class = "slide">
+                            <img class = "carousel-pic" src="assets/GGFM%20Photos/WEB_%20Background/GG_BG_C-4.jpg"/>
+                                <div class = "overlay"></div>
+                        </div>
+                        
+                        <div class = "slide">
+                            <img class = "carousel-pic"  src="assets/GGFM%20Photos/WEB_%20Background/GG_BG_C-8.jpg"/>
+                                <div class = "overlay"></div>
+                        </div>
+                        <div class = "slide">
+                            <img class = "carousel-pic" 
+                            src="assets/GGFM%20Photos/WEB_%20Background/GG_BG_C-6.jpg"/>
+                                <div class = "overlay"></div>
+                        </div>
+                </div> 
+        </div>
+
+        <!-- Text -->
+        <div class="about-f2">
+                <span class="about-main">Green Giant FM</span>
+                <br>
+                <span class="about-desc">De La Salle University-Manila’s Official Radio Station, located at Br. Bloemen Hall. Green Giant FM broadcasts live on Tuesdays and Thursdays from 7:30 AM to 9:15 PM, and on Wednesdays and Fridays from 7:30 AM to 4:00 PM. </span>
+        </div>
+    </div>
+</div>
+
+<!-- Second page (Vision Mission) -->
+<div class="about-vm part">
+    <div class="vision">
+        <div class="content">
+            <span class="about-main">Vision</span>
+            <br>
+            <span class="about-desc">Green Giant FM functions as a platform for students to broadcast their ideas, a vehicle for student leaders to promote awareness of university functions, a partner for student organizations and external clients to publicize events, and as a channel for the DLSU administration to announce important updates to students. Green Giant FM provides services in events hosting, media coverage, voice overs, and on-air/online promotions. </span>
+        </div>
+    </div>
+    <div class="mission">
+        <div class="content">
+            <span class="about-main">Mission</span>
+            <br>
+            <span class="about-desc">DLSU Radio: Green Giant FM is an educational non-profit, student-run organization that aims to serve the Lasallian community and listeners worldwide by providing entertaining, original content, and broadcasting accurate and reliable news. The organization is inspired by the Lasallian values of Faith, Zeal for Service, and Communion as it strives for excellence in all endeavors in the field of Radio Communication and Entertainment. </span>
+        </div>
+    </div>
+</div>
+
+<!-- Third page (EB) -->
+<div class="about-eb part">
+    <div class="f-header">
+        <h1 class="f-title">
+            EXECUTIVE BOARD
+        </h1>
+        <h2 class="f-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum elementum ante, et sagittis turpis luctus et. Maecenas volutpat gravida sem. Praesent cursus volutpat orci id pellentesque....</h2>
+    </div>
+    <div class="eb-cards">
+        <div class="card">
+            <img class="card-pic" src="assets/GGFM%20Photos/Top%203%20Photos/nice_carolino-683x1024.jpg"/>       
+            <div class="c-name">
+                <h1>Nice Carolino</h1>
+                <h2>President</h2>
+            </div>
+            <div class="c-desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum elementum ante, et sagittis turpis luctus et. Maecenas volutpat gravida sem. Praesent cursus volutpat orci id pellentesque....</p>
+            </div>
+            <div class="c-links">
+                    <img src="assets\icons\social media svg\fb.svg" alt="facebook" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\insta.svg" alt="instagram" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\twitter.svg" alt="twitter" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\spotify.svg" alt="spotify" class="sm2-icon"> 
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="assets/GGFM%20Photos/Top%203%20Photos/fiona_caitlin_buendia-683x1024.jpg"/>
+            <div class="c-name">
+                <h1>Fiona Caitlin Buendia</h1>
+                <h2>VP for Internal Affairs</h2>
+            </div>
+            <div class="c-desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum elementum ante, et sagittis turpis luctus et. Maecenas volutpat gravida sem. Praesent cursus volutpat orci id pellentesque....</p>
+            </div>
+            <div class="c-links">
+                    <img src="assets\icons\social media svg\fb.svg" alt="facebook" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\insta.svg" alt="instagram" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\twitter.svg" alt="twitter" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\spotify.svg" alt="spotify" class="sm2-icon"> 
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-pic" src="assets/GGFM%20Photos/Top%203%20Photos/milena_quiaoit-683x1024.jpg"/>
+            <div class="c-name">
+                <h1>Milena Quiaoit</h1>
+                <h2>VP for External Affairs</h2>
+            </div>
+            <div class="c-desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum elementum ante, et sagittis turpis luctus et. Maecenas volutpat gravida sem. Praesent cursus volutpat orci id pellentesque....</p>
+            </div>
+            <div class="c-links">
+                    <img src="assets\icons\social media svg\fb.svg" alt="facebook" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\insta.svg" alt="instagram" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\twitter.svg" alt="twitter" class="sm2-icon"> 
+                    <img src="assets\icons\social media svg\spotify.svg" alt="spotify" class="sm2-icon"> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fourth page (pools) -->
+<div class="about-pools part">
+    <div class="f-header">
+        <h1 class="f-title">
+            POOLS
+        </h1>
+        <h2 class="f-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum elementum ante, et sagittis turpis luctus et. Maecenas volutpat gravida sem. Praesent cursus volutpat orci id pellentesque....</h2>
+    </div>
+
+    <div class="pool-wrapper">
+        <div class="pool-container">
+            <img src="assets\icons\pool svg\audio.svg" alt="Audio Pool" class="pool-img">
+            <div class="pool-title">
+                <h1>Audio</h1>
+            </div>
+            <div class="pool-desc">
+                <p>The Audio Pool is behind your listening experience when you tune in to DLSU Radio: Green Giant FM. Making sure that you listen to the hottest tracks with some quirky commercials in between, we guarantee that there is never a dull moment available on air.</p>
+            </div>
+        </div>
+        <div class="pool-container">
+            <img src="assets\icons\pool svg\logistics.svg" alt="Logistics Pool" class="pool-img">
+            <div class="pool-title">
+                <h1>Logistics</h1>
+            </div>
+            <div class="pool-desc">
+                <p>The Documentations and Logistics Pool serves as the office managers of DLSU Radio: Green Giant FM. Keeping track of the documents, the studios, and the members of the station themselves, we are considered as the backbone of the organization.</p>
+            </div>
+        </div>
+        <div class="pool-container">
+            <img src="assets\icons\pool svg\marketing.svg" alt="Marketing Pool" class="pool-img">
+            <div class="pool-title">
+                <h1>Marketing</h1>
+            </div>
+            <div class="pool-desc">
+                <p>DLSU Radio: Green Giant FM may have the music that people love and the shows to entertain, but it's the Marketing Pool that makes sure it gets out there! From branding to partnerships, we ensure that Green Giant FM is known to the world. </p>
+            </div>
+        </div>
+        <div class="pool-container">
+            <img src="assets\icons\pool svg\public_relations.svg" alt="Public Relations Pool" class="pool-img">
+            <div class="pool-title">
+                <h1>Public Relations</h1>
+            </div>
+            <div class="pool-desc">
+                <p>The Public Relations Pool is in charge of working with clients inside and outside De La Salle University to help promote and build up their events. From on-air promotion to providing talents for different events, we make certain that our services are what our clients want and more. </p>
+            </div>
+        </div>
+        <div class="pool-container">
+            <img src="assets\icons\pool svg\publicity.svg" alt="Publicity and Productions Pool" class="pool-img">
+            <div class="pool-title">
+                <h1>Publicity & Productions</h1>
+            </div>
+            <div class="pool-desc">
+                <p>From camera work to graphic design, the Publicity and Productions Pool is responsible for all the creative visual needs produced by the station. Members of the pool also make up the Press Team, who provide photo and video coverage for events inside and outside De La Salle University. </p>
+            </div>
+        </div>
+        <div class="pool-container">
+            <img src="assets\icons\pool svg\radio-talent.svg" alt="Radio Talent Pool" class="pool-img">
+            <div class="pool-title">
+                <h1>Radio Talent</h1>
+            </div>
+            <div class="pool-desc">
+                <p>The Radio Talent Pool consists of the voices and faces of DLSU Radio: Green Giant FM. The DJs control the music you listen to and talk about various topics you didn’t think you needed to hear. Not only do we work our magic on air, but we also bring out our personality and wit in different hosting events inside and outside De La Salle University. </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    
+<!-- Audio Player -->
+<div class = "sticky-player audioplayer">
+    <div class = "audioplayer-playpause">
+        <img src="assets/icons/2x/baseline_play_circle_outline_white_24dp.png"/>
+    </div>
+    <div id = "music-details">
+        <div id = "song-name">
+            Goodie Bag
+        </div>
+        <div id = "song-artist">
+            Still Woozy
+        </div>
+    </div>
+    <div id = "audio-progress">
+            <div class="audioplayer-time audioplayer-time-current">00:00</div>
+            <div class="audioplayer-bar" style="width: 70%">
+            <div class="audioplayer-bar-loaded"></div>
+            <div class="audioplayer-bar-played"></div>
+        </div>
+        <div class="audioplayer-time audioplayer-time-duration">00:56</div>
+    </div>
+    <div class="audioplayer-volume audio-volume">
+        <div class="audioplayer-volume-button" title=""><a href="..#"></a></div>
+        <div class="audioplayer-volume-adjust">
+        <div>
+            <div style="width: 100%;"></div>
+        </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+
+
+</html>
