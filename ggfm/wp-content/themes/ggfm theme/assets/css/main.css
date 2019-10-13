@@ -1,0 +1,789 @@
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova&display=swap:bold'); 
+
+        * {
+            margin: 0px;
+        }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+        
+        .roboto{
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 100%;
+            letter-spacing: .1rem;
+            line-height: 24.41px;
+            font-weight: 100;
+            font-style: normal;
+        }
+        .bg {
+            background-size: cover;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 10%, rgba(80, 20, 20, 0.5)  92.36%, rgba(255, 255, 255, 0.75)143.01%), url("../GGFM%20Photos/WEB_%20Background/GG_BG_C-10.jpg");
+            width: 100%;
+            height: 100%;
+        }
+        
+        #song-artist{
+            color: rgba(255, 255, 255, 0.75);
+            font-family: 'Comfortaa';
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            line-height: 11px;
+        }
+        
+        #song-name{
+            color: white;
+            font-family: 'Comfortaa', cursive;
+            font-size: 16px;
+            padding: 0px 10px;
+        }
+        .overlay{
+            background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.35) 70%, rgba(0,0,0,0.9)); 
+            position: absolute;
+            clear: float;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+             border-radius: .5em;
+        }
+        .container{
+            display: grid;
+            
+            grid-template-columns: [col-0] 50px [col-1] 10% [col-2] auto [col-3] 10% [col-4] 50px [col-5];
+            
+            grid-template-rows: [row-0] 15% [row-1] 85% [row-3] 5% [row-4];
+            
+            overflow-y: hidden;
+        }
+        
+        .nav-wrapper{
+/*            background-color: tr;*/
+            grid-column-start: col-0;
+            grid-column-end: span col-5;
+            grid-row-start: row-0;
+            grid-row-end: span row-1; 
+            position: relative;
+            display: grid;
+            
+            grid-template-columns: [coln-0] 10% [coln-1] 0px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 10% [coln-7]
+            
+        }
+        .nav-list{
+            display: inline-flex;
+            grid-column-start: coln-5;
+            grid-column-end: span coln-6; 
+            list-style: none;
+            overflow-y: hidden;
+            overflow-x:hidden; 
+             position: relative;
+            margin-top: 20px;
+            
+            display: flex;
+            justify-content: flex-end;
+        }
+        .nav-item{
+            padding: 48px 22px;
+            background-color: transparent;
+            overflow-x: inherit;
+            overflow-y:inherit; 
+            cursor: pointer;
+        }
+        .nav-logo{
+/*            background-color: beige;*/
+            margin-top: 20px;
+            width: 320px;
+            grid-column-start: coln-2;
+            grid-column-end: span coln-3; 
+           
+        }
+        
+        .main-wrapper{
+            grid-column-start: col-2;
+            grid-column-end: span col-3;
+            grid-row-start: row-1;
+            grid-row-end: span row-2y; 
+            
+            display: flex;
+            flex-wrap:wrap;
+            margin-top: 25px;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            position: relative;
+
+           
+        }
+
+        .carousel-wrapper{
+            background:red;
+            width: 100px;
+        }
+        
+        .carousel{
+            top: 0;
+            bottom:125;
+            left: 10;
+            right: 10;
+            box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.75);
+            border-radius: 0.5em;
+            position: absolute;
+        }
+        .nav-item img{
+            width: 32px;
+            height: 32px;
+        }
+        
+
+        .carousel-pic{
+             border-radius: 0.75em;
+        }
+        
+        #play-btn{
+/*            background-color: violet;*/
+             grid-column-start: coln-0;
+            grid-column-end: span coln-2; 
+         }
+        
+        #music-details{
+/*           background-color: blue;*/
+            grid-column-start: coln-2;
+            grid-column-end: span coln-3; 
+            display: inline-flex;
+            align-items: center;
+         }
+        
+        #audio-progress{
+/*            background-color: red;*/
+            grid-column-start: coln-3;
+            grid-column-end: span coln-6; 
+            display: inline-flex;
+            padding: 6px 5%;
+        }
+        
+        .audio-volume{
+            grid-column-start: coln-6;
+            grid-column-end: span coln-7; 
+           
+        }
+        
+        .audioplayer-time{
+            color: #DDDDDD;
+            font-family: 'Comofortaa';
+            font-style: normal;
+            font-size: 0.5em;
+            align-items: center;
+            letter-spacing: .15em;
+            line-height: 9px;
+        }
+        
+        .slick-dots {
+	       display: flex;
+	       justify-content: center;
+	       margin-bottom: -20px;
+            
+        }
+        
+  .slick-dots li button::before {
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.5;
+  }
+    
+  .slick-dots li.slick-active button::before {
+    color: #fff;
+    opacity: 1;
+  }  
+        
+        img{
+            height: 100%; width: 100%;
+            /* border-radius: .6em; */
+            object-fit: cover;
+        }
+        
+        .sticky-player img{
+            height: 100%; width: 100%;
+            border-radius: 5px;
+            box-shadow: 10px;
+            object-fit: contain;
+        }
+/*---- Event Page ----*/
+
+.events-wrapper{
+    position: relative;
+    grid-column-start: col-1;
+    grid-column-end: span col-4;
+    grid-row-start: row-1;
+    grid-row-end: span row-3; 
+    width: 100%;
+/*    background-color: aliceblue;*/
+    display: flex;
+    margin-top: 10px;
+}
+
+.events-carousel{
+    position: absolute;
+    background: rgba(0,0,0,0.5); 
+    top: 0;
+    bottom: 50;
+    right: 40;
+    left: 40;
+    display: flex;
+    margin-top: 35px;
+}
+
+.event-wrapper{
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    
+}
+.event-wrapper img{
+    object-fit: cover;
+    background-blend-mode: color;
+    box-shadow: 10px 5px rgba(5, 5, 5, 0.5);
+}
+
+.event-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+/*    background-color: red;*/
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    z-index: 2;
+    
+}
+.event-overlay div{
+    position: relative;
+    padding: 5px;
+    padding-top: 80%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.75));
+    
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.events-filter{
+    position: absolute;
+    right: 70;
+    background-color: rgb(0,0,0,0.5);
+    width: auto;
+    height: 35px;
+    color: white;
+    font-family: Comfortaa;
+font-size: 18px;
+line-height: 18px;
+    text-align: left;
+    padding: 10px 15px;
+    margin-right: 20px;
+    float: right;
+}
+.dropdown{
+    color: white;
+    background-color: rgb(2,2,2,1);
+    width: 145px;
+    text-align: left;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: 50%;
+    padding-left: 15px;
+    position: absolute;
+    right: 90;
+    z-index: 1;
+}
+
+.dropdown .item{
+    height: auto;
+    padding: 10px 0px;
+     font-family: Comfortaa;
+font-size: 16px;
+line-height: 24px;
+}
+.events-filter img{
+    position: relative;;
+    bottom: 0;
+    margin-left: 20px;
+    width: 32px;
+}
+.event-overlay{
+    position: re;
+    top: 0;
+    bottom: 0;
+    color: white;
+    font-family: Comfortaa;
+    line-height: 38px;
+}
+.event-overlay h2{
+    position: relative;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.event-overlay p{
+    position: relative;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+/*===========Blog page*/
+.blogs-wrapper{
+    position: relative;
+    grid-column-start: col-1;
+    grid-column-end: span col-4;
+    grid-row-start: row-1;
+    grid-row-end: span row-3; 
+    width: 100%;
+/*    background-color: aliceblue;*/
+    display: flex;
+}
+
+.blog-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+/*    background-color: red;*/
+    width: 100%;
+/*    background-color: aliceblue;*/
+    z-index: 2;
+    height: 100%;
+    padding: inherit;
+    color: white;
+    font-family: Comfortaa;
+    
+}
+
+.blog-overlay >  div{
+    position: absolute;
+    background: linear-gradient(180deg, rgba(25, 25, 25, 0.05) 50%, rgba(0, 0, 0, 0.75) 70%, rgba(0, 0, 0, 1));
+     z-index: 2;
+    width: 100%;
+    height: 100%;
+    margin-top: .5px;
+    border-left: 2.5px solid rgba(150, 150, 150, 0.25);
+    box-shadow: 5px 5px 3px rgba(5, 5, 5, 0.75);
+    
+}
+.blog-overlay > h2{
+    position: absolute;
+    top: 73%;
+    bottom: 20;
+    right: 40;
+    left: 20;
+    z-index: 3;
+    font-size: 24px;
+    line-height: 26px;
+    height: auto;
+}
+
+.blog-overlay > p{
+    position: absolute;
+   top:  80%;
+    bottom: 10;
+    right: 40;
+    left: 20;
+    z-index: 3;
+    overflow-x: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+
+    color: #DDDDDD;
+    overflow-y: hidden;
+    
+}
+.blog > .blog-overlay > p{
+    font-size: 10px;
+     padding-top: 5px;
+     line-height: 12px;
+     letter-spacing: 0em;
+  
+}
+.blog > .blog-overlay > h2{
+    font-size: 12px;
+     line-height: 14px;
+    height: 14px;
+    overflow-y: hidden;
+}
+
+.blog-main-wrapper{
+    position: absolute;
+    bottom: 50;
+    top: 30;
+    right: 55%;
+    left: 5%;
+    width: 50%;
+/*    background-color:antiquewhite;*/
+}
+
+.blog-main-wrapper > .blog-carousel{
+    width:100%;
+    position: relative;
+    height: 100%;
+    
+}
+
+.blog-wrapper{
+/*    background-color: rebeccapurple;*/
+    position:absolute;
+    right: 0;
+    top: 10;
+    bottom: 90;
+    left: 55%;
+    width: 39%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.blog > .blog-carousel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.blog{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 20px 0px 0px 20px;
+/*    background-color: aqua;*/
+}
+        /*---- Radio Talent Page ----*/
+
+        div .rt-profile{
+            height: 50%;
+            width: 65%;
+            background: rgba(34, 34, 34, 0.25);
+            margin: 0 auto;
+            /* mix-blend-mode: overlay; */
+            display: flex;
+        }
+
+        
+
+        .rt-pic{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:15px;
+            /* background:red; */
+        }
+
+        .rt-pic > img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:90%;
+            height: 95%;
+            
+        }
+
+        .rt-description{
+            width: 70%;
+            height: 100%;
+            padding: 10px;
+            padding-top:40px;
+            /* background: blue; */
+        }
+
+        .rt-name{
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-decoration-line: underline;
+
+            color: #FFFFFF;
+        }
+
+        .rt-text1{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.07em;
+            padding-top: 10px;
+            color: #AAAAAA;
+        }
+
+        .rt-text2{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            
+            color: #FFFFFF;
+
+            padding-top: 20px;
+        }
+
+        .rt-text2 > span{
+            font-weight: bold;
+            padding-right: 5px;
+        }
+
+        .rt-text3{
+            
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        .rt-text3 > span, .rt-text3 > p > span{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            color: #CFCFCF;
+        }
+
+        .rt-text3 > p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #CFCFCF;
+        }
+
+        .rt-links{
+            align-self: flex-end;
+        }
+        .sm-icon{
+            height: 45px;
+            width: 45px;
+            opacity: 0.8;
+        }
+
+        .sm-icon:hover {
+            opacity: 1;
+        }
+
+        .carousel-wrapper{
+            width: 100%;
+            height: 27.5%;
+            margin-top:20px;
+            margin-bottom:20px;
+            
+            /* background: red; */
+        }
+
+        .slider-image{
+            max-width:95%;
+            max-height:auto;
+
+
+            object-fit: cover;
+            object-position: 50% 0;
+        }
+
+
+        /*---- Radio Talent Page 2 ----*/
+
+        .rt-container{
+            overflow: auto;
+            
+        }
+
+        .rt-grid{
+/*
+            display: grid;
+            grid-column-gap: 5px;
+            padding-left:5%;
+            padding-right: 5%;
+            grid-template-columns: auto auto auto auto;
+*/
+            
+            display: flex;
+            flex-wrap:wrap; 
+            align-content: center;
+            justify-content: center;
+            /* overflow:auto; */
+        }
+
+
+        .rt-div{
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2em;
+            margin-bottom: 3em;
+        }
+
+        .rta-img{
+            width: auto;
+            height: 260px;
+        }
+
+        .rta-img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 186, 25, 0.5);
+          }
+
+        .rta-name{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+
+/*Contact page*/
+.contact-section{
+   
+    
+    grid-column-start: col-1;
+    grid-column-end: span col-4;
+    grid-row-start: row-1;
+    grid-row-end: span row-3; 
+    
+     position: relative;
+    
+    width: 100%;
+    display:block;
+    
+/*    background-color: aliceblue;*/
+    overflow-x: hidden;
+    padding: 0px;
+}
+
+.contact-form{
+    height: 100%;
+    width: 700px;
+    position: relative;
+/*    background-color: rebeccapurple;*/
+    float: right;
+    padding: 50px 10px;
+    
+}
+.contact-form > h1{
+    display: block;
+    width: 100%;
+}
+
+.contact-form > h2{
+    display: block;
+    width: 100%;
+    resize: vertical;
+}
+
+
+#txtEmail{
+    font-family: "Comfortaa";
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    padding: 19px 27px;
+margin: 10px 0px;
+width: 586px;
+height: 58px;
+background: #252018;
+border: 2px solid rgba(255, 255, 255, 0.8);
+box-sizing: border-box;
+border-radius: 7px;
+    margin-top: 40px;
+    
+    font-size: 16px;
+    color: rgba(243, 243, 243, 0.6);
+}
+#txtName{
+    font-family: "Comfortaa";
+    font-weight: bold;
+    padding: 19px 27px;
+margin: 10px 0px;
+width: 586px;
+height: 58px;
+background: #252018;
+border: 2px solid rgba(255, 255, 255, 0.8);
+box-sizing: border-box;
+border-radius: 7px;
+    font-size: 16px;
+    color: rgba(243, 243, 243, 0.6);
+}
+
+#txtMessage{
+   font-family: "Comfortaa";
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    padding: 19px 27px;
+margin: 10px 0px;
+width: 586px;
+height: 261px;
+background: #252018;
+border: 2px solid rgba(255, 255, 255, 0.8);
+box-sizing: border-box;
+border-radius: 7px;
+    
+    
+    font-size: 16px;
+    color: rgba(243, 243, 243, 0.6);
+    
+}
+#btnSend{
+    background: rgba(0, 247, 69, 0.59);
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    border: 0.25px solid white;
+    margin-top: 20px;
+    font-family: "Comfortaa";
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.69);
+    font-size: 16px;
+}
+
+.contact-form h1{
+    font-family: "Roboto";
+    font-weight: 400px;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.07em;
+    color: #00A006;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2{
+    width: 568px;
+height: 22px;
+    font-family: "Comfortaa";
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: rgba(243, 243, 243, 0.8);
+
+text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+input:focus::-webkit-input-placeholder 
+{
+    color: transparent;
+}
+
+
+        
