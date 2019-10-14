@@ -1,7 +1,7 @@
 <?php
 
 function load_stylesheets(){
-    wp_register_style('main_css', get_template_directory_uri() . '/assets/css/main.css', array(), 1, 'all');
+    wp_register_style('main_css', get_template_directory_uri() . '/assets/css/main.css', array(), rand(111,9999), 'all');
     wp_enqueue_style('main_css');
 
     wp_register_style('slick_css', get_template_directory_uri() . '/assets/slick-plugin/slick/slick.css', array(), 1, 'all');
