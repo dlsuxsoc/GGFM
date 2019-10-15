@@ -1,3 +1,5 @@
+
+<?php wp_footer();?>
 <div class = "sticky-player audioplayer">
         <div class = "audioplayer-playpause">
             <img src="<?php bloginfo('template_directory');?>/assets/icons/2x/baseline_play_circle_outline_white_24dp.png"/>
@@ -29,9 +31,4 @@
 
     </div>
 </div>
-
-<?php wp_footer();?>
-    
 </body>
-
-</html>

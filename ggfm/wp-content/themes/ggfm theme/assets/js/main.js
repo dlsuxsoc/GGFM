@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
   
-  $('.single-item').slick({
+  $('.carousel').slick({
        infinite: true,
        mobileFirst:true,
 	dots: true,
@@ -8,7 +8,8 @@ jQuery(document).ready(function($){
 	autoplay: true,
 	autoplaySpeed: 3000,
 	fade: true,
-	fadeSpeed: 1000,
+  fadeSpeed: 1000,
+  adaptiveHeight: true
   });//carousel
  
  $(function() {

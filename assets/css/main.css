@@ -50,7 +50,7 @@
              border-radius: .5em;
         }
         .container{
-            display: grid;
+            display: flex;
             
             grid-template-columns: [col-0] 50px [col-1] 10% [col-2] auto [col-3] 10% [col-4] 50px [col-5];
             
@@ -60,16 +60,10 @@
         }
         
         .nav-wrapper{
-/*            background-color: tr;*/
-            grid-column-start: col-0;
-            grid-column-end: span col-5;
-            grid-row-start: row-0;
-            grid-row-end: span row-1; 
-            position: relative;
-            display: grid;
-            
-            grid-template-columns: [coln-0] 10% [coln-1] 0px [coln-2] 200px [coln-3] 10% [coln-4] 10px [coln-5] auto [coln-6] 10% [coln-7]
-            
+/*            position: absolute;*/
+            padding: 20px;
+            display: block;
+
         }
         .nav-list{
             display: inline-flex;
@@ -79,32 +73,31 @@
             overflow-y: hidden;
             overflow-x:hidden; 
              position: relative;
-            margin-top: 20px;
             
             display: flex;
             justify-content: flex-end;
         }
         .nav-item{
-            padding: 48px 22px;
-            background-color: transparent;
+            padding: 30px 18px;
+           
             overflow-x: inherit;
             overflow-y:inherit; 
             cursor: pointer;
+            white-space: nowrap;
         }
         .nav-logo{
 /*            background-color: beige;*/
-            margin-top: 20px;
             width: 320px;
             grid-column-start: coln-2;
             grid-column-end: span coln-3; 
            
         }
-        
+
         .main-wrapper{
             grid-column-start: col-2;
             grid-column-end: span col-3;
             grid-row-start: row-1;
-            grid-row-end: span row-2y; 
+            grid-row-end: span row-2; 
             
             display: flex;
             flex-wrap:wrap;
@@ -117,6 +110,7 @@
         
         
         .carousel{
+            position: absolute;
             top: 0;
             bottom:125;
             left: 10;
@@ -124,7 +118,7 @@
             box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.75);
             border-radius: 0.5em;
 /*            background-color: aqua;*/
-            position: absolute;
+            
             
         }
         .nav-item img{
@@ -335,7 +329,7 @@ line-height: 24px;
     grid-column-end: span col-4;
     grid-row-start: row-1;
     grid-row-end: span row-3; 
-    width: 100%;
+    width: 100%;v
 /*    background-color: aliceblue;*/
     display: flex;
 }
@@ -665,12 +659,11 @@ line-height: 24px;
 }
 
 .contact-form{
-    height: 100%;
     width: 700px;
     position: relative;
 /*    background-color: rebeccapurple;*/
     float: right;
-    padding: 50px 10px;
+    padding: 20px 10px;
     
 }
 .contact-form > h1{
@@ -754,7 +747,7 @@ border-radius: 7px;
 .contact-form h1{
     font-family: "Roboto";
     font-weight: 400px;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 42px;
     letter-spacing: 0.07em;
     color: #00A006;
@@ -763,7 +756,7 @@ border-radius: 7px;
 
 .contact-form h2{
     width: 568px;
-height: 22px;
+height: 18px;
     font-family: "Comfortaa";
 font-size: 16px;
 line-height: 22px;

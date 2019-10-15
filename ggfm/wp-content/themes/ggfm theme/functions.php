@@ -36,4 +36,17 @@ function load_js(){
 }
 add_action('wp_enqueue_scripts', 'load_js');
 
+add_custom_background();
 
+// function register_my_menu() {
+//     register_nav_menu('header-menu',__( 'Header Menu' ));
+//   }
+// add_action( 'init', 'register_my_menu' );
+
+// add_action( 'after_setup_theme', 'remove_default_menu', 11 );
+// function remove_default_menu(){
+// unregister_nav_menu('nav-wrapper');
+// }
+register_nav_menus( array(  
+    'header' => __( 'Header Navigation')
+) );

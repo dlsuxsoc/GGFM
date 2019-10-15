@@ -19,7 +19,8 @@ $(".dropdown").hide();
 $('.events-carousel').slick({
   infinite: true,
   slidesToScroll: 1,
-  slidesPerRow: 3
+  slidesPerRow: 3,
+    arrows: false
 });
 
 var slider = $(".blog-carousel");

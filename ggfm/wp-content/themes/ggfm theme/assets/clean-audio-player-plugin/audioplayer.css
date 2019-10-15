@@ -3,7 +3,7 @@
 .audioplayer {
                 position: fixed;
             bottom: 0px;
-            height: 2em;
+            height: 1.5em;
             width: 100%;
             background: #282828;
             display: grid;

@@ -1,4 +1,7 @@
 
+<?php 
+/* Template Name: Homepage */ 
+?>
   <?php get_header();?>
    <div class = "main-wrapper">
             <div class = "slider single-item carousel">
