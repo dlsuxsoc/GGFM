@@ -1,9 +1,13 @@
 
-
-
+<html>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<?php wp_head(); ?>
+</head>
 <body <?php body_class();?>>
 <div class = "bg-overlay"></div>
-<?php wp_head();?>
 <header>
 <div class = "nav-logo">
 <img src="<?php bloginfo('template_directory');?>/assets/GGFM%20Photos/Logos/PNGs/GGFM%20Logo_Dark.png" />

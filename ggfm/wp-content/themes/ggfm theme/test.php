@@ -1,0 +1,7 @@
+<?php 
+/* Template Name: test */ 
+?>
+
+<?php
+echo do_shortcode('[smartslider3 slider=1]');
+?>

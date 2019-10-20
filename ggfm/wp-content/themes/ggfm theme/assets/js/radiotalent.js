@@ -1,15 +1,15 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
 
-//    Radio Talents
+    //    Radio Talents
     var dj = ["Bobby", "Charlie", "Ching", "Craig", "Drew", "Floyd", "Franny", "Gabby", "Jamie", "Jules", "Kaps", "Kayla", "Kit",
-              "Luna", "Micah", "Moka", "Nikki", "Peaches", "Rocky", "Quadro", "Rocky", "RP", "Sundae"]
+        "Luna", "Micah", "Moka", "Nikki", "Peaches", "Rocky", "Quadro", "Rocky", "RP", "Sundae"]
 
 
-//    Init Carousel
+    //    Init Carousel
 
     // Create div with images
-    for(var i = 0; i < dj.length; i++){
+    for (var i = 0; i < dj.length; i++) {
         var img = new Image();
         img.src = "assets\\GGFM Photos\\WEB_ DJ Photos\\WEB_DJ-" + dj[i] + ".jpg";
         img.className = "slider-image"
@@ -32,23 +32,22 @@ $(document).ready(function(){
         dots: false,
         prevArrow: false,
         nextArrow: false
-      });
-            
-  
+    });
+
+
 
     // slider.click(alert("hello"));
 
     //  Slick Mouse wheel control
-    slider.on('wheel', (function(e) {
+    slider.on('wheel', (function (e) {
         e.preventDefault();
-    
-        if (e.originalEvent.deltaY < 0 ) { // || e.originalEvent.deltaX > 0
+
+        if (e.originalEvent.deltaY < 0) { // || e.originalEvent.deltaX > 0
             $(this).slick('slickNext');
         } else {
             $(this).slick('slickPrev');
         }
-        }));
+    }));
 
 })
-    
-  
+
