@@ -1,0 +1,31 @@
+[21-Oct-2019 20:01:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function the_post() on null in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php:14
+Stack trace:
+#0 D:\xampp\htdocs\ggfm\wp-includes\template-loader.php(78): include()
+#1 D:\xampp\htdocs\ggfm\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\ggfm\index.php(17): require('D:\\xampp\\htdocs...')
+#3 {main}
+  thrown in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php on line 14
+[21-Oct-2019 20:01:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function the_post() on null in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php:14
+Stack trace:
+#0 D:\xampp\htdocs\ggfm\wp-includes\template-loader.php(78): include()
+#1 D:\xampp\htdocs\ggfm\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\ggfm\index.php(17): require('D:\\xampp\\htdocs...')
+#3 {main}
+  thrown in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php on line 14
+[21-Oct-2019 20:03:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function the_title() on null in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php:16
+Stack trace:
+#0 D:\xampp\htdocs\ggfm\wp-includes\template-loader.php(78): include()
+#1 D:\xampp\htdocs\ggfm\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\ggfm\index.php(17): require('D:\\xampp\\htdocs...')
+#3 {main}
+  thrown in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php on line 16
+[21-Oct-2019 20:15:31 UTC] PHP Warning:  Use of undefined constant the_permalink - assumed 'the_permalink' (this will throw an Error in a future version of PHP) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php on line 16
+[21-Oct-2019 20:15:31 UTC] PHP Warning:  Use of undefined constant the_permalink - assumed 'the_permalink' (this will throw an Error in a future version of PHP) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php on line 16
+[21-Oct-2019 20:15:31 UTC] PHP Warning:  Use of undefined constant the_permalink - assumed 'the_permalink' (this will throw an Error in a future version of PHP) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\events-page.php on line 16
+[23-Oct-2019 11:17:59 UTC] PHP Parse error:  syntax error, unexpected 'wp_register_script' (T_STRING) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 26
+[23-Oct-2019 11:17:59 UTC] PHP Parse error:  syntax error, unexpected 'wp_register_script' (T_STRING) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 26
+[23-Oct-2019 11:18:26 UTC] PHP Parse error:  syntax error, unexpected 'add_custom_background' (T_STRING) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 34
+[23-Oct-2019 11:18:34 UTC] PHP Warning:  Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 33
+[23-Oct-2019 11:18:34 UTC] PHP Warning:  log() expects parameter 1 to be float, string given in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 33
+[23-Oct-2019 11:18:40 UTC] PHP Warning:  Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP) in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 25
+[23-Oct-2019 11:18:40 UTC] PHP Warning:  log() expects parameter 1 to be float, string given in D:\xampp\htdocs\ggfm\wp-content\themes\ggfm theme\functions.php on line 25

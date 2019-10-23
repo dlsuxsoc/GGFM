@@ -1,140 +1,78 @@
 
 jQuery(document).ready(function ($) {
+  function toggle() {
+    $('.nav-resp').css('top', $('.header-input').prop('checked') ? '-100%' : '0')
+    $('body').css('overflowY', $('.header-input').prop('checked') ? 'auto !important' : 'hidden !important')
+    $('.header-input').toggle()
 
-  // $('.carousel').slick({
-  //   infinite: true,
-  //   mobileFirst: true,
-  //   dots: true,
-  //   arrows: false,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  //   fade: true,
-  //   fadeSpeed: 1000,
-  //   adaptiveHeight: true
-  // });//carousel
+  }
+  $('.header-burger').on('click', function () {
+    toggle()
+  })
+  $('.close-icon').on('click', function () {
+    toggle()
+  })
 
-  // $('.single-item').slick({
-  //   infinite: true,
-  //   dots: true,
-  //   arrows: false,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  //   fade: true,
-  //   fadeSpeed: 1000
-  // });//carousel
+  // Nav Bar
 
-  $(function () {
-    $('audio').audioPlayer()
+  // Blogs
+  $('.carousel').slick({
+    infinite: true,
+    mobileFirst: true,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    fadeSpeed: 1000,
+    adaptiveHeight: true,
+    slidesPerRow: 3
+  });//carousel
+
+
+
+  $(".dropdown").hide();
+
+  // Events
+
+  $('.events-carousel').slick({
+    infinite: false,
+    slidesToScroll: 3,
+    slidesPerRow: 3
   });
 
+  var eventslider = $(".events-carousel");
 
-  // $(".dropdown").hide();
+  $(".events-wrapper").on('wheel', (function (e) {
+    e.preventDefault();
 
-  // $('.events-carousel').slick({
-  //   infinite: true,
-  //   slidesToScroll: 1,
-  //   slidesPerRow: 3
-  // });
+    if (e.originalEvent.deltaX > 0) {
+      eventslider.slick('slickNext');
+    } else {
+      eventslider.slick('slickPrev');
+    }
+  }));
 
-  // var slider = $(".blog-carousel");
+  $("body").click((e) => {
+    if ($(e.target).hasClass("btndropdown")) {
+      if ($(".dropdown").is(":hidden")) {
+        $(".dropdown").slideDown("slow");
+      } else {
+        $(".dropdown").slideUp("slow");
+      }
+    }
+    else {
+      if ($(".dropdown").is(":visible")) {
+        $(".dropdown").slideUp("slow");
+      }
+    }
+  })
 
-  // slider
-  //   .slick({
-  //     infinite: true,
-  //     dots: false,
-  //     arrows: false,
-  //     slidesToScroll: 1,
-  //     slidesPerRow: 1
-  //   });
+  $(".item").click((e) => {
+    var sortby = e.target.innerText;
 
-  // $(".blog-overlay").on('wheel', (function (e) {
-  //   e.preventDefault();
+  })
 
-  //   if (e.originalEvent.deltaX > 0) {
-  //     slider.slick('slickNext');
-  //   } else {
-  //     slider.slick('slickPrev');
-  //   }
-  // }));
-
-  // var eventslider = $(".events-carousel");
-
-  // $(".events-wrapper").on('wheel', (function (e) {
-  //   e.preventDefault();
-
-  //   if (e.originalEvent.deltaX > 0) {
-  //     eventslider.slick('slickNext');
-  //   } else {
-  //     eventslider.slick('slickPrev');
-  //   }
-  // }));
-
-
-
-  // $("body").click((e) => {
-  //   if ($(e.target).hasClass("btndropdown")) {
-  //     if ($(".dropdown").is(":hidden")) {
-  //       $(".dropdown").slideDown("slow");
-  //     } else {
-  //       $(".dropdown").slideUp("slow");
-  //     }
-  //   }
-  //   else {
-  //     if ($(".dropdown").is(":visible")) {
-  //       $(".dropdown").slideUp("slow");
-  //     }
-  //   }
-  // })
-
-
-
-  //    Radio Talents
-  // var dj = ["Bobby", "Charlie", "Ching", "Craig", "Drew", "Floyd", "Franny", "Gabby", "Jamie", "Jules", "Kaps", "Kayla", "Kit",
-  //   "Luna", "Micah", "Moka", "Nikki", "Peaches", "Rocky", "Quadro", "Rocky", "RP", "Sundae"]
-
-
-  // //    Init Carousel
-
-  // // Create div with images
-  // for (var i = 0; i < dj.length; i++) {
-  //   var img = new Image();
-  //   img.src = "assets\\GGFM Photos\\WEB_ DJ Photos\\WEB_DJ-" + dj[i] + ".jpg";
-  //   img.className = "slider-image"
-
-  //   var div = document.createElement("div");
-  //   div.append(img)
-  //   $("#rt-carousel").append(div);
-  // }
-
-  // Init slider
-  // const slider = $(".rt-slider");
-  // slider.slick({
-  //   slidesToShow: 7,
-  //   slidesToScroll: 1,
-  //   cssEase: 'linear',
-  //   centerMode: true,
-  //   // autoplay: true,
-  //   // autoplaySpeed: 2000,
-
-  //   dots: false,
-  //   prevArrow: false,
-  //   nextArrow: false
-  // });
-
-
-
-  // slider.click(alert("hello"));
-
-  //  Slick Mouse wheel control
-  // slider.on('wheel', (function (e) {
-  //   e.preventDefault();
-
-  //   if (e.originalEvent.deltaY < 0) { // || e.originalEvent.deltaX > 0
-  //     $(this).slick('slickNext');
-  //   } else {
-  //     $(this).slick('slickPrev');
-  //   }
-  // }));
 
 })
 
